@@ -103,7 +103,7 @@ main {
   cursor: pointer;
 }
 .hero  {
-  padding-block: 150px;
+  padding-block: 220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,7 +111,7 @@ main {
   flex-wrap: wrap-reverse; position: relative;
 }
 .hero article {
-  flex-basis: 500px;
+  flex-basis: 707px;
 }
 .hero article h1 {
   color: var(--Dark-Blue);
@@ -123,7 +123,6 @@ main {
   color: var(--Dark-Grayish-Blue);
   font-size: 14px;
   margin-bottom: 30px;
-  max-width: 304px;
 }
 .hero article .btn {
   color: #fff;
@@ -152,14 +151,32 @@ main {
   top: 0;
   bottom: 230px;
 }
+@media (width < 1288px) {
+  .hero {
+    padding-block: 100px;
+    justify-content: center;
+  }
+  .hero  article { 
+    text-align: center;
+    flex-grow: 1;
+  }
+}
 @media (width < 1080px) {
   .hero {
+    padding-block: 100px;
     justify-content: center;
+  }
+  .hero::before {
+    right: -483px;
+    bottom: 441px;
   }
   .hero article {
     text-align: center;
     flex-grow: 1;
   }
+  .hero  article h1 {
+    font-size: 40px;
+    }
   .hero article p {
     max-width: 100%;
   }
